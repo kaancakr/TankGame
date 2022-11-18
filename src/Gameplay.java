@@ -90,25 +90,25 @@ public class Gameplay  extends JPanel implements ActionListener
         {
             // draw player 1
             if(player1up)
-                player1=new ImageIcon("player1_tank_up.png");
+                player1=new ImageIcon("assets/player1_tank_up.png");
             else if(player1down)
-                player1=new ImageIcon("player1_tank_down.png");
+                player1=new ImageIcon("assets/player1_tank_down.png");
             else if(player1right)
-                player1=new ImageIcon("player1_tank_right.png");
+                player1=new ImageIcon("assets/player1_tank_right.png");
             else if(player1left)
-                player1=new ImageIcon("player1_tank_left.png");
+                player1=new ImageIcon("assets/player1_tank_left.png");
 
             player1.paintIcon(this, g, player1X, player1Y);
 
             // draw player 2
             if(player2up)
-                player2=new ImageIcon("player2_tank_up.png");
+                player2=new ImageIcon("assets/player2_tank_up.png");
             else if(player2down)
-                player2=new ImageIcon("player2_tank_down.png");
+                player2=new ImageIcon("assets/player2_tank_down.png");
             else if(player2right)
-                player2=new ImageIcon("player2_tank_right.png");
+                player2=new ImageIcon("assets/player2_tank_right.png");
             else if(player2left)
-                player2=new ImageIcon("player2_tank_left.png");
+                player2=new ImageIcon("assets/player2_tank_left.png");
 
             player2.paintIcon(this, g, player2X, player2Y);
 
@@ -302,7 +302,7 @@ public class Gameplay  extends JPanel implements ActionListener
             }
             if(e.getKeyCode()== KeyEvent.VK_F)
             {
-                File file = new File("Gunfire-And-Voices.wav");
+                File file = new File("sound/Gunfire-And-Voices.wav");
                 AudioInputStream audioStream = null;
                 try {
                     audioStream = AudioSystem.getAudioInputStream(file);
@@ -400,7 +400,7 @@ public class Gameplay  extends JPanel implements ActionListener
         public void keyPressed(KeyEvent e) {
             if(e.getKeyCode()== KeyEvent.VK_M)
             {
-                File file = new File("Gunfire-And-Voices.wav");
+                File file = new File("sound/Gunfire-And-Voices.wav");
                 AudioInputStream audioStream = null;
                 try {
                     audioStream = AudioSystem.getAudioInputStream(file);

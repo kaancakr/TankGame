@@ -32,8 +32,8 @@ public class brick {
 
     public brick()
     {
-        breakBrickImage=new ImageIcon("break_brick.jpg");
-        solidBrickImage=new ImageIcon("solid_brick.jpg");
+        breakBrickImage=new ImageIcon("assets/break_brick.jpg");
+        solidBrickImage=new ImageIcon("assets/solid_brick.jpg");
 
         for(int i=0; i< brickON.length;i++)
         {
