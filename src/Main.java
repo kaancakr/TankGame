@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 public class Main {
 
     public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+
         JFrame obj=new JFrame();
         Gameplay gamePlay = new Gameplay();
 
@@ -27,5 +28,6 @@ public class Main {
 
         clip.start();
         clip.loop(Clip.LOOP_CONTINUOUSLY);
+
     }
 }
