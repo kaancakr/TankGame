@@ -4,7 +4,6 @@ import java.awt.Rectangle;
 
 import javax.swing.ImageIcon;
 
-
 public class brick {
     int bricksXPos[] = {50,350,450,550,50,300,350,450,550,150,150,450,550,
             250,50,100,150,550,250,350,450,550,50,250,350,550,
@@ -28,7 +27,6 @@ public class brick {
 
     private ImageIcon breakBrickImage;
     private ImageIcon solidBrickImage;
-
 
     public brick()
     {
