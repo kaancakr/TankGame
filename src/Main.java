@@ -29,7 +29,6 @@ public class Main {
         clip.start();
         clip.loop(Clip.LOOP_CONTINUOUSLY);
 
-
     }
 
 }
