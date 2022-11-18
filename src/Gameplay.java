@@ -247,31 +247,6 @@ public class Gameplay  extends JPanel implements ActionListener
             g.setFont(new Font("serif",Font.BOLD, 30));
             g.drawString("(Space to Restart)", 230,430);
 
-            File file = new File("sound/Gunfire-And-Voices.wav");
-            AudioInputStream audioStream = null;
-            try {
-                audioStream = AudioSystem.getAudioInputStream(file);
-            } catch (UnsupportedAudioFileException ex) {
-                throw new RuntimeException(ex);
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-            Clip clip = null;
-            try {
-                clip = AudioSystem.getClip();
-            } catch (LineUnavailableException ex) {
-                throw new RuntimeException(ex);
-            }
-            try {
-                clip.open(audioStream);
-            } catch (LineUnavailableException ex) {
-                throw new RuntimeException(ex);
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-
-            clip.start();
-
         }
         else if(player2lives == 0)
         {
@@ -283,6 +258,7 @@ public class Gameplay  extends JPanel implements ActionListener
             g.setFont(new Font("serif",Font.BOLD, 30));
             g.drawString("(Space to Restart)", 230,430);
             play = false;
+
         }
 
         g.dispose();
