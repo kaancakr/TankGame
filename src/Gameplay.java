@@ -2,12 +2,9 @@ import javax.sound.sampled.*;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 
-import java.awt.Graphics;
-import java.awt.Color;
-import java.awt.Rectangle;
+import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.Font;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
 import java.io.File;
@@ -249,6 +246,32 @@ public class Gameplay  extends JPanel implements ActionListener
             g.setColor(Color.white);
             g.setFont(new Font("serif",Font.BOLD, 30));
             g.drawString("(Space to Restart)", 230,430);
+
+            File file = new File("sound/Gunfire-And-Voices.wav");
+            AudioInputStream audioStream = null;
+            try {
+                audioStream = AudioSystem.getAudioInputStream(file);
+            } catch (UnsupportedAudioFileException ex) {
+                throw new RuntimeException(ex);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+            Clip clip = null;
+            try {
+                clip = AudioSystem.getClip();
+            } catch (LineUnavailableException ex) {
+                throw new RuntimeException(ex);
+            }
+            try {
+                clip.open(audioStream);
+            } catch (LineUnavailableException ex) {
+                throw new RuntimeException(ex);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+
+            clip.start();
+
         }
         else if(player2lives == 0)
         {
