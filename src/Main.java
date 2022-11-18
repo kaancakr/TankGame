@@ -15,7 +15,6 @@ public class Main {
         obj.setTitle("SHOOT AND RUN");
         obj.setBackground(Color.gray);
         obj.setResizable(false);
-        System.out.println("Test");
 
         obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         obj.add(gamePlay);
