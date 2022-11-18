@@ -245,7 +245,6 @@ public class Gameplay  extends JPanel implements ActionListener
             g.setColor(Color.white);
             g.setFont(new Font("serif",Font.BOLD, 30));
             g.drawString("(Space to Restart)", 230,430);
-
         }
         else if(player2lives == 0)
         {
@@ -257,7 +256,6 @@ public class Gameplay  extends JPanel implements ActionListener
             g.setFont(new Font("serif",Font.BOLD, 30));
             g.drawString("(Space to Restart)", 230,430);
             play = false;
-
         }
 
         g.dispose();
