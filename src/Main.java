@@ -5,7 +5,6 @@ import java.io.IOException;
 import javax.sound.sampled.*;
 import javax.swing.JFrame;
 
-
 public class Main {
 
     public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
@@ -28,7 +27,5 @@ public class Main {
 
         clip.start();
         clip.loop(Clip.LOOP_CONTINUOUSLY);
-
     }
-
 }
