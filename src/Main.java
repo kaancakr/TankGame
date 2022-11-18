@@ -12,7 +12,7 @@ public class Main {
         Gameplay gamePlay = new Gameplay();
 
         obj.setBounds(10, 10, 1366, 768);
-        obj.setTitle("SHOOT AND RUN");
+        obj.setTitle("SHOOT RUN");
         obj.setBackground(Color.gray);
         obj.setResizable(false);
 
