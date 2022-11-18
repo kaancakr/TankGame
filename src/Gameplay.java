@@ -20,9 +20,6 @@ public class Gameplay  extends JPanel implements ActionListener
     private static final long serialVersionUID = 1L;
 
     private brick br;
-
-    Sound sound = new Sound();
-
     private ImageIcon player1;
     private int player1X = 200;
     private int player1Y = 550;
@@ -490,33 +487,8 @@ public class Gameplay  extends JPanel implements ActionListener
                 if(!(player2X > 1366))
                     player2X+=10;
             }
-
         }
     }
-
-    public void playMusic(int i) {
-
-        sound.setFile(i);
-        sound.play();
-        sound.loop();
-
-    }
-
-    public void stopMusic() {
-
-        sound.stop();
-
-    }
-
-    public void playSE(int i) {
-
-        sound.setFile(i);
-        sound.play();
-
-
-    }
-
-
 }
 
 
