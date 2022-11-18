@@ -20,7 +20,7 @@ public class Main {
         obj.add(gamePlay);
         obj.setVisible(true);
 
-        File file = new File("sound/action_time.wav");
+        File file = new File("sound/gameMusic.wav");
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audioStream);

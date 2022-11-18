@@ -224,7 +224,6 @@ public class Gameplay  extends JPanel implements ActionListener
             }
         }
 
-
         // the scores
         g.setColor(Color.white);
         g.setFont(new Font("serif",Font.BOLD, 15));
@@ -489,5 +488,3 @@ public class Gameplay  extends JPanel implements ActionListener
         }
     }
 }
-
-
