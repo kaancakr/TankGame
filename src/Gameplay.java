@@ -1,3 +1,4 @@
+import javax.sound.sampled.*;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 
@@ -9,6 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.IOException;
 
 import javax.swing.Timer;
 
@@ -302,6 +305,31 @@ public class Gameplay  extends JPanel implements ActionListener
             }
             if(e.getKeyCode()== KeyEvent.VK_F)
             {
+                File file = new File("Gunfire-And-Voices.wav");
+                AudioInputStream audioStream = null;
+                try {
+                    audioStream = AudioSystem.getAudioInputStream(file);
+                } catch (UnsupportedAudioFileException ex) {
+                    throw new RuntimeException(ex);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+                Clip clip = null;
+                try {
+                    clip = AudioSystem.getClip();
+                } catch (LineUnavailableException ex) {
+                    throw new RuntimeException(ex);
+                }
+                try {
+                    clip.open(audioStream);
+                } catch (LineUnavailableException ex) {
+                    throw new RuntimeException(ex);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+
+                clip.start();
+
                 if(!player1Shoot)
                 {
                     if(player1up)
@@ -375,6 +403,30 @@ public class Gameplay  extends JPanel implements ActionListener
         public void keyPressed(KeyEvent e) {
             if(e.getKeyCode()== KeyEvent.VK_M)
             {
+                File file = new File("Gunfire-And-Voices.wav");
+                AudioInputStream audioStream = null;
+                try {
+                    audioStream = AudioSystem.getAudioInputStream(file);
+                } catch (UnsupportedAudioFileException ex) {
+                    throw new RuntimeException(ex);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+                Clip clip = null;
+                try {
+                    clip = AudioSystem.getClip();
+                } catch (LineUnavailableException ex) {
+                    throw new RuntimeException(ex);
+                }
+                try {
+                    clip.open(audioStream);
+                } catch (LineUnavailableException ex) {
+                    throw new RuntimeException(ex);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+
+                clip.start();
                 if(!player2Shoot)
                 {
                     if(player2up)
