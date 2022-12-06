@@ -16,6 +16,7 @@ public class Gameplay  extends JPanel implements ActionListener
 {
     private static final long serialVersionUID = 1L;
 
+    private heart hrt;
     private brick br;
     private ImageIcon player1;
     private int player1X = 200;
@@ -55,6 +56,7 @@ public class Gameplay  extends JPanel implements ActionListener
     public Gameplay()
     {
         br = new brick();
+        hrt = new heart();
         player1Listener = new Player1Listener();
         player2Listener = new Player2Listener();
         setFocusable(true);

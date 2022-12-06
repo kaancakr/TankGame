@@ -27,11 +27,14 @@ public class brick {
 
     private ImageIcon breakBrickImage;
     private ImageIcon solidBrickImage;
+    private ImageIcon heartImage;
 
     public brick()
     {
         breakBrickImage=new ImageIcon("assets/break_brick.jpg");
         solidBrickImage=new ImageIcon("assets/solid_brick.jpg");
+        heartImage=new ImageIcon("assets/heartfull.png");
+
 
         for(int i=0; i< brickON.length;i++)
         {
