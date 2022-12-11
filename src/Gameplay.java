@@ -277,6 +277,7 @@ public class Gameplay  extends JPanel implements ActionListener
             if(e.getKeyCode()== KeyEvent.VK_SPACE && (player1lives == 0 || player2lives == 0))
             {
                 br = new brick();
+                hrt = new heart();
                 player1X = 200;
                 player1Y = 550;
                 player1right = false;

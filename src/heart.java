@@ -16,9 +16,9 @@ public class heart {
                 150,100,50,350,400,500,550,100,300,300,300,450,650,650,650,600,550,450,400,350};
 
 
-        int brickON[] = new int[72];
+        int heartON[] = new int[72];
 
-        private ImageIcon breakBrickImage;
+
 
         private ImageIcon heartImage;
 
@@ -28,19 +28,28 @@ public class heart {
             heartImage=new ImageIcon("assets/heartfull.png");
 
 
-            for(int i=0; i< brickON.length;i++)
+            for(int i=0; i< heartON.length;i++)
             {
-                brickON[i] = 1;
+                heartON[i] = 1;
+            }
+        }
+
+        public void generateHeart(){
+            int i = 0;
+            while(i<10){
+                int randRow = (int) (Math.random() * heartON.length);
+                int randCol = (int) (Math.random() * heartON.length);
+
             }
         }
 
         public void draw(Component c, Graphics g)
         {
-            for(int i=0; i< brickON.length;i++)
+            for(int i=0; i< heartON.length;i++)
             {
-                if(brickON[i]==1)
+                if(heartON[i]==1)
                 {
-                    breakBrickImage.paintIcon(c, g, heartXPos[i],heartYPos[i]);
+                    heartImage.paintIcon(c, g, heartXPos[i],heartYPos[i]);
                 }
             }
         }
@@ -49,13 +58,13 @@ public class heart {
         public boolean checkCollision(int x, int y)
         {
             boolean collided = false;
-            for(int i=0; i< brickON.length;i++)
+            for(int i=0; i< heartON.length;i++)
             {
-                if(brickON[i]==1)
+                if(heartON[i]==1)
                 {
                     if(new Rectangle(x, y, 10, 10).intersects(new Rectangle(heartXPos[i], heartYPos[i], 50, 50)))
                     {
-                        brickON[i] = 0;
+                        heartON[i] = 0;
                         collided = true;
                         break;
                     }
