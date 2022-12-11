@@ -85,6 +85,8 @@ public class Gameplay  extends JPanel implements ActionListener
         // draw Breakable bricks
         br.draw(this, g);
 
+        hrt.draw(this,g);
+
         if(play)
         {
             // draw player 1
@@ -155,6 +157,7 @@ public class Gameplay  extends JPanel implements ActionListener
                     player1Bullet = null;
                     player1Shoot = false;
                     bulletShootDir1 = "";
+                    hrt.draw(this, g);
                 }
 
                 if(player1Bullet.getY() < 1
