@@ -7,10 +7,7 @@ public class heart {
 
         int heartYPos[] = {50,50};
 
-
         int heartON[] = new int[2];
-
-
 
         private ImageIcon heartImage;
 
@@ -25,16 +22,6 @@ public class heart {
                 heartON[i] = 1;
             }
         }
-
-        public void removeHeart(){
-
-            for(int i=0; i< heartON.length;i++)
-            {
-                heartON[i] = 0;
-            }
-
-        }
-
 
         public void draw(Component c, Graphics g)
         {
@@ -68,7 +55,3 @@ public class heart {
         }
 
 }
-
-
-
-
