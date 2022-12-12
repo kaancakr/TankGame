@@ -154,6 +154,8 @@ public class Gameplay  extends JPanel implements ActionListener
                 if(br.checkCollision(player1Bullet.getX(), player1Bullet.getY())
                         || br.checkSolidCollision(player1Bullet.getX(), player1Bullet.getY()))
                 {
+                    player1lives += 1;
+                    hrt.removeHeart();
                     player1Bullet = null;
                     player1Shoot = false;
                     bulletShootDir1 = "";
