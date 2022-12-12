@@ -157,9 +157,9 @@ public class Gameplay  extends JPanel implements ActionListener
                     player1lives += 1;
                     hrt.removeHeart();
                     player1Bullet = null;
+                    hrt.draw(this, g);
                     player1Shoot = false;
                     bulletShootDir1 = "";
-                    hrt.draw(this, g);
                 }
 
                 if(player1Bullet.getY() < 1
