@@ -4,7 +4,7 @@ import java.awt.Rectangle;
 
 import javax.swing.ImageIcon;
 
-public class brick extends Gameplay {
+public class brick {
     int bricksXPos[] = {50,350,450,550,50,300,350,450,550,150,150,450,550,
                         250,50,100,150,550,250,350,450,550,50,250,350,550,
                         50,150,250,300,350,550,50,150,250,350,450,550,50,
