@@ -12,8 +12,8 @@ import java.io.IOException;
 
 import javax.swing.Timer;
 
-public class Gameplay  extends JPanel implements ActionListener
-{
+public class Gameplay  extends JPanel implements ActionListener {
+
     private heart hrt;
     private brick br;
     private ImageIcon player1;
