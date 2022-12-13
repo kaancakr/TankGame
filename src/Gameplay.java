@@ -14,8 +14,6 @@ import javax.swing.Timer;
 
 public class Gameplay  extends JPanel implements ActionListener
 {
-    private static final long serialVersionUID = 1L;
-
     private heart hrt;
     private brick br;
     private ImageIcon player1;
