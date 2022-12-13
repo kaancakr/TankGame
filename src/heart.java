@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class heart {
+public class heart extends Gameplay{
 
           int heartXPos[] = {250,200};
 
