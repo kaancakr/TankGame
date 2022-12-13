@@ -85,6 +85,7 @@ public class Gameplay  extends JPanel implements ActionListener
         // draw Breakable bricks
         br.draw(this, g);
 
+        // draw heart bricks
         hrt.draw(this,g);
 
         if(play)
@@ -113,6 +114,7 @@ public class Gameplay  extends JPanel implements ActionListener
 
             player2.paintIcon(this, g, player2X, player2Y);
 
+            // draw the position of bullet
             if(player1Bullet != null && player1Shoot)
             {
                 if(bulletShootDir1.equals(""))
@@ -140,7 +142,7 @@ public class Gameplay  extends JPanel implements ActionListener
                     player1Bullet.draw(g);
                 }
 
-
+                // if the bullet touch the player 2
                 if(new Rectangle(player1Bullet.getX(), player1Bullet.getY(), 10, 10)
                         .intersects(new Rectangle(player2X, player2Y, 50, 50)))
                 {
@@ -151,6 +153,7 @@ public class Gameplay  extends JPanel implements ActionListener
                     bulletShootDir1 = "";
                 }
 
+                // if the player 1 shoots the bricks
                 if(br.checkCollision(player1Bullet.getX(), player1Bullet.getY())
                         || br.checkSolidCollision(player1Bullet.getX(), player1Bullet.getY()))
                 {
@@ -159,6 +162,7 @@ public class Gameplay  extends JPanel implements ActionListener
                     bulletShootDir1 = "";
                 }
 
+                // if the player 1 shoots the heart bricks
                 if(hrt.checkheartCollision(player1Bullet.getX(), player1Bullet.getY()))
                 {
                     player1lives += 1;
