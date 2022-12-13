@@ -27,7 +27,7 @@ public class brick extends Gameplay {
 
     private ImageIcon breakBrickImage;
     private ImageIcon solidBrickImage;
-    private ImageIcon heartImage;
+  
 
     public brick()
     {
