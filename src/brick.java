@@ -23,11 +23,12 @@ public class brick {
     int solidBricksYPos[] = {0,0,50,100,150,200,200,250,300,350,400,400,450,
             550,600,550,500,650,650,650,600,250,300,350,550,100,0,50,100,250,200,500,500,500,600,650};
 
-    int brickON[] = new int[72];
+    int brickON[] = new int[73];
 
     private ImageIcon breakBrickImage;
     private ImageIcon solidBrickImage;
   
+
 
     public brick()
     {

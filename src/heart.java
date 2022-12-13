@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class heart {
 
-          int heartXPos[] = {250,200};
+        int heartXPos[] = {200,250};
 
         int heartYPos[] = {50,50};
 
