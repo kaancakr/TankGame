@@ -172,9 +172,9 @@ public class Gameplay  extends JPanel implements ActionListener
                 }
 
                 if(player1Bullet.getY() < 1
-                        || player1Bullet.getY() > 580
+                        || player1Bullet.getY() > 768
                         || player1Bullet.getX() < 1
-                        || player1Bullet.getX() > 630)
+                        || player1Bullet.getX() > 1200)
                 {
                     player1Bullet = null;
                     player1Shoot = false;
@@ -237,9 +237,9 @@ public class Gameplay  extends JPanel implements ActionListener
                 }
 
                 if(player2Bullet.getY() < 1
-                        || player2Bullet.getY() > 580
+                        || player2Bullet.getY() > 768
                         || player2Bullet.getX() < 1
-                        || player2Bullet.getX() > 630)
+                        || player2Bullet.getX() > 1200)
                 {
                     player2Bullet = null;
                     player2Shoot = false;
