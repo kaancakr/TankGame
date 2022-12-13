@@ -27,7 +27,7 @@ public class brick {
 
     private ImageIcon breakBrickImage;
     private ImageIcon solidBrickImage;
-    private ImageIcon heartImage;
+  
 
     public brick()
     {
