@@ -321,30 +321,7 @@ public class Gameplay  extends JPanel implements ActionListener
             }
             if(e.getKeyCode()== KeyEvent.VK_F)
             {
-                File file = new File("sound/Gunfire-And-Voices.wav");
-                AudioInputStream audioStream = null;
-                try {
-                    audioStream = AudioSystem.getAudioInputStream(file);
-                } catch (UnsupportedAudioFileException ex) {
-                    throw new RuntimeException(ex);
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
-                Clip clip = null;
-                try {
-                    clip = AudioSystem.getClip();
-                } catch (LineUnavailableException ex) {
-                    throw new RuntimeException(ex);
-                }
-                try {
-                    clip.open(audioStream);
-                } catch (LineUnavailableException ex) {
-                    throw new RuntimeException(ex);
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
-
-                clip.start();
+                sound();
 
                 if(!player1Shoot)
                 {
@@ -410,6 +387,33 @@ public class Gameplay  extends JPanel implements ActionListener
                     player1X+=10;
             }
         }
+
+        private static void sound() {
+            File file = new File("sound/Gunfire-And-Voices.wav");
+            AudioInputStream audioStream = null;
+            try {
+                audioStream = AudioSystem.getAudioInputStream(file);
+            } catch (UnsupportedAudioFileException ex) {
+                throw new RuntimeException(ex);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+            Clip clip = null;
+            try {
+                clip = AudioSystem.getClip();
+            } catch (LineUnavailableException ex) {
+                throw new RuntimeException(ex);
+            }
+            try {
+                clip.open(audioStream);
+            } catch (LineUnavailableException ex) {
+                throw new RuntimeException(ex);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+
+            clip.start();
+        }
     }
 
     private class Player2Listener implements KeyListener
@@ -419,30 +423,7 @@ public class Gameplay  extends JPanel implements ActionListener
         public void keyPressed(KeyEvent e) {
             if(e.getKeyCode()== KeyEvent.VK_M)
             {
-                File file = new File("sound/Gunfire-And-Voices.wav");
-                AudioInputStream audioStream = null;
-                try {
-                    audioStream = AudioSystem.getAudioInputStream(file);
-                } catch (UnsupportedAudioFileException ex) {
-                    throw new RuntimeException(ex);
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
-                Clip clip = null;
-                try {
-                    clip = AudioSystem.getClip();
-                } catch (LineUnavailableException ex) {
-                    throw new RuntimeException(ex);
-                }
-                try {
-                    clip.open(audioStream);
-                } catch (LineUnavailableException ex) {
-                    throw new RuntimeException(ex);
-                } catch (IOException ex) {
-                    throw new RuntimeException(ex);
-                }
-
-                clip.start();
+                Player1Listener.sound();
                 if(!player2Shoot)
                 {
                     if(player2up)
