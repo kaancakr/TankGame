@@ -67,6 +67,7 @@ public class Gameplay  extends JPanel implements ActionListener
 
     }
 
+    @Override
     public void paint(Graphics g)
     {
         // play background
@@ -414,6 +415,7 @@ public class Gameplay  extends JPanel implements ActionListener
 
             clip.start();
         }
+
     }
 
     private class Player2Listener implements KeyListener

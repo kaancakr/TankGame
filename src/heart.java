@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class heart {
+public class heart extends brick{
 
         int heartXPos[] = {200,250};
 
@@ -23,6 +23,7 @@ public class heart {
             }
         }
 
+        @Override
         public void draw(Component c, Graphics g)
         {
             for(int i=0; i< heartON.length;i++)
