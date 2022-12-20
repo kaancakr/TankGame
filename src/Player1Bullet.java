@@ -2,7 +2,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 
-public class Player1Bullet extends Gameplay{
+public class Player1Bullet {
     private double x, y;
 
     public Player1Bullet(double x, double y)
