@@ -14,8 +14,10 @@ import javax.swing.Timer;
 
 public class Gameplay  extends JPanel implements ActionListener
 {
+    private Font font;
     private heart hrt;
     private brick br;
+    private brokeBricks broke;
     private ImageIcon player1;
     private int player1X = 200;
     private int player1Y = 550;
@@ -54,6 +56,7 @@ public class Gameplay  extends JPanel implements ActionListener
     public Gameplay()
     {
         br = new brick();
+        broke = new brokeBricks();
         hrt = new heart();
         player1Listener = new Player1Listener();
         player2Listener = new Player2Listener();
@@ -81,11 +84,14 @@ public class Gameplay  extends JPanel implements ActionListener
         // draw solid bricks
         br.drawSolids(this, g);
 
+        broke.drawBrokes(this,g);
+
         // draw Breakable bricks
         br.draw(this, g);
 
         // draw heart bricks
         hrt.draw(this,g);
+
 
         if(play)
         {
@@ -161,10 +167,19 @@ public class Gameplay  extends JPanel implements ActionListener
                     bulletShootDir1 = "";
                 }
 
+
                 // if the player 1 shoots the heart bricks
                 if(hrt.checkheartCollision(player1Bullet.getX(), player1Bullet.getY()))
                 {
                     player1lives += 1;
+                    player1Bullet = null;
+                    player1Shoot = false;
+                    bulletShootDir1 = "";
+                }
+
+                // if the player 1 shoots the breakable bricks again
+                if (broke.checkbrokeCollision(player1Bullet.getX(), player1Bullet.getY()))
+                {
                     player1Bullet = null;
                     player1Shoot = false;
                     bulletShootDir1 = "";
@@ -230,6 +245,14 @@ public class Gameplay  extends JPanel implements ActionListener
                 if(hrt.checkheartCollision(player2Bullet.getX(), player2Bullet.getY()))
                 {
                     player2lives += 1;
+                    player2Bullet = null;
+                    player2Shoot = false;
+                    bulletShootDir2 = "";
+                }
+
+                // if the player 2 shoots the breakable bricks again
+                if (broke.checkbrokeCollision(player2Bullet.getX(), player2Bullet.getY()))
+                {
                     player2Bullet = null;
                     player2Shoot = false;
                     bulletShootDir2 = "";
@@ -414,6 +437,7 @@ public class Gameplay  extends JPanel implements ActionListener
             }
 
             clip.start();
+
         }
 
     }
