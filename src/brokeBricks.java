@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class brokeBricks {
+public class brokeBricks extends brick{
 
         int brokebricksXPos[] = {50,350,450,550,50,300,350,450,550,150,150,450,550,
                 250,50,100,150,550,250,350,450,550,50,250,350,550,

@@ -14,7 +14,6 @@ import javax.swing.Timer;
 
 public class Gameplay  extends JPanel implements ActionListener
 {
-    private Font font;
     private heart hrt;
     private brick br;
     private brokeBricks broke;
