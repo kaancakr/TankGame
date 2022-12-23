@@ -3,11 +3,11 @@ import java.awt.*;
 
 public class heart extends brick{
 
-        int heartXPos[] = {200,250};
+        int heartXPos[] = {200,250,850,900,1050};
 
-        int heartYPos[] = {50,50};
+        int heartYPos[] = {50,50,200,250,100};
 
-        int heartON[] = new int[2];
+        int heartON[] = new int[5];
 
         private ImageIcon heartImage;
 

@@ -30,8 +30,8 @@ public class Gameplay  extends JPanel implements ActionListener
     private String bulletShootDir1 = "";
 
     private ImageIcon player2;
-    private int player2X = 400;
-    private int player2Y = 50;
+    private int player2X = 950;
+    private int player2Y = 100;
     private boolean player2right = false;
     private boolean player2left = false;
     private boolean player2down = true;
