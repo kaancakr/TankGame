@@ -83,6 +83,7 @@ public class Gameplay  extends JPanel implements ActionListener
         // draw solid bricks
         br.drawSolids(this, g);
 
+        // draw broken bricks
         broke.drawBrokes(this,g);
 
         // draw Breakable bricks
