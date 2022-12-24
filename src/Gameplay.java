@@ -285,22 +285,22 @@ public class Gameplay  extends JPanel implements ActionListener
         {
             g.setColor(Color.white);
             g.setFont(new Font("serif",Font.BOLD, 60));
-            g.drawString("Game Over", 200,300);
-            g.drawString("Player 2 Won", 180,380);
+            g.drawString("Game Over", 500,300);
+            g.drawString("Player 2 Won", 470,380);
             play = false;
             g.setColor(Color.white);
             g.setFont(new Font("serif",Font.BOLD, 30));
-            g.drawString("(Space to Restart)", 230,430);
+            g.drawString("(Space to Restart)", 530,430);
         }
         else if(player2lives == 0)
         {
             g.setColor(Color.white);
             g.setFont(new Font("serif",Font.BOLD, 60));
-            g.drawString("Game Over", 200,300);
-            g.drawString("Player 1 Won", 180,380);
+            g.drawString("Game Over", 500,300);
+            g.drawString("Player 1 Won", 470,380);
             g.setColor(Color.white);
             g.setFont(new Font("serif",Font.BOLD, 30));
-            g.drawString("(Space to Restart)", 230,430);
+            g.drawString("(Space to Restart)", 530,430);
             play = false;
         }
 
