@@ -322,6 +322,7 @@ public class Gameplay  extends JPanel implements ActionListener
             {
                 br = new brick();
                 hrt = new heart();
+                broke = new brokeBricks();
                 player1X = 200;
                 player1Y = 550;
                 player1right = false;
@@ -329,7 +330,7 @@ public class Gameplay  extends JPanel implements ActionListener
                 player1down = false;
                 player1up = true;
 
-                player2X = 400;
+                player2X = 950;
                 player2Y = 100;
                 player2right = false;
                 player2left = false;
