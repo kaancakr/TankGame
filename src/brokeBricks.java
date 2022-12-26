@@ -26,7 +26,7 @@ public class brokeBricks extends brick{
         public brokeBricks()
         {
 
-            brokeBrickImage=new ImageIcon("assets/broke_brick.png");
+            brokeBrickImage=new ImageIcon("assets/broken.png");
 
 
             for(int i=0; i< brokeON.length;i++)
