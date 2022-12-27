@@ -24,8 +24,8 @@ public class Main {
         File file = new File("sound/BeepBox-Song.wav");
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
-        clip.open(audioStream);
 
+        clip.open(audioStream);
         clip.start();
         clip.loop(Clip.LOOP_CONTINUOUSLY);
 

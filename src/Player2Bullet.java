@@ -1,7 +1,7 @@
 import java.awt.Color;
 import java.awt.*;
 
-public class Player2Bullet {
+public class Player2Bullet extends Gameplay{
     private double x, y;
 
     public Player2Bullet(double x, double y)
