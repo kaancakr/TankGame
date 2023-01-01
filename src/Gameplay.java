@@ -17,6 +17,7 @@ public class Gameplay  extends JPanel implements ActionListener
     private heart hrt;
     private brick br;
     private brokeBricks broke;
+
     private ImageIcon player1;
     private int player1X = 200;
     private int player1Y = 550;
